@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-lg-12" style="background-color:'black';">
+		
+		<h1 style="font-family:'Bookman Old Style'; font-size: 2.5em; margin-bottom: 24px;line-height: 42px;">{{singleData.name}}</h1>
+		<div class="col-lg-3 col-lg-3" >
+			<img style="height:390px;" ng-src="{{singleData.img}}" alt="">
+		</div>
+		<h2 style="padding-top: 25px;padding-left: 300px;">Description:</h2>
+		<h4 style="padding-left: 305px;font-weight:10px"> {{singleData.description}}</h4>
+		<!--<h2 style="padding-top: 25px;padding-left: 300px;">Genres:</h2>-->
+		<h4 style="padding-left: 300px">Genres: <span style="padding-left: 20px" ng-repeat="x in singleData.genres"> {{x}} {{$last ? '' : ($index==x.singleData.genres.length-2) ? ' and ' : '/ '}}</span></h4>
+		
+		<h3 style="padding-top: 25px;padding-left: 300px;">Rating: {{singleData.rate}}</h3>
+		<h3 style="padding-top: 25px;padding-left: 300px;">Runtime: {{singleData.length}}</h3>
+	</div>
+</div>

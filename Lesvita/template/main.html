@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-lg-12 col-lg-12">
+		<form-class="form-inline">
+		<div class="form-group">
+			<label for="name">Search Movie by Name:</label>
+			<input type="text" class="form-control" id="name" ng-model="moviename" placeholder="Please type Movie Name">
+		</div>
+		<div class="form-group">
+			<label for="genre">Filter By Genre:</label>
+			<input type="text" class="form-control" id="genres" ng-model="genre" placeholder="Filter by Genre">
+		</div>
+
+	</form><br>
+</div>
+<div class="col-lg-3 col-lg-3" ng-repeat="imovie in myData | filter:moviename">
+	<img ng-src="{{imovie.img}}" alt="" ng-click="gotoMovie(imovie.id)" class="show-cursor"> 
+</div>
+</div>
